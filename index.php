@@ -29,17 +29,18 @@
             </thead>
             <tbody>
                 <?php
+                    include "db_conn.php";
 
-                    $sql = "SELECT * FROM 'crud'";
+                    $sql = "SELECT * FROM `crud`";
                     $result = mysqli_query($conn, $sql);
                     while($row = mysqli_fetch_assoc($result)){
                         ?>
                         <tr>
-                        <th scope="row">1</th>
-                        <td>Mark</td>
-                        <td>Otto</td>
-                        <td>@mdo</td>
-                        <td>@mdo</td>
+                        <th><?php echo $row['id'] ?></th>
+                        <th><?php echo $row['first_name'] ?></th>
+                        <th><?php echo $row['last_name'] ?></th>
+                        <th><?php echo $row['email'] ?></th>
+                        <th><?php echo $row['gender'] ?></th>
                         <td>
                             <a href="" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
                             <a href="" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
@@ -50,17 +51,6 @@
                     }
 
                 ?>
-                <tr>
-                <th scope="row">1</th>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-                <td>@mdo</td>
-                <td>
-                    <a href="" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
-                    <a href="" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
-                </td>
-                </tr>
             </tbody>
         </table>
     </div>
