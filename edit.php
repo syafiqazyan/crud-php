@@ -44,32 +44,41 @@
         <h3>Edit User Information</h3>
         <p class="text-muted">Click update after changing any information</p>
       </div>
+
+      <?php
+      $id = $_GET['id'];
+      $sql = "SELECT * FROM `crud` WHERE id = $id LIMIT 1";
+      $result = mysqli_query($conn, $sql);
+      $row = mysqli_fetch_assoc($result);
+      ?>
+
+
       <div class="container d-flex justify-content-center">
         <form action="" method="post" style="width:50vw; min-width:300px;">
           <div class="row mb-3">
             <div class="col">
               <label for="" class="form-label">First Name:</label>
-              <input type="text" class="form-control" name="first_name" placeholder="Albert">
+              <input type="text" class="form-control" name="first_name" value="<?php echo $row['first_name'] ?>" >
             </div>
             <div class="col">
               <label for="" class="form-label">Last Name:</label>
-              <input type="text" class="form-control" name="last_name" placeholder="Einstein">
+              <input type="text" class="form-control" name="last_name" value="<?php echo $row['last_name'] ?>" >
             </div>
           </div>
 
           <div>
             <div class="mb-3">
               <label for="" class="form-label">Email:</label>
-              <input type="email" class="form-control" name="email" placeholder="name@example.com">
+              <input type="email" class="form-control" name="email" value="<?php echo $row['email'] ?>">
             </div>
           </div>
 
           <div class="form-group mb-3">
             <label for="">Gender:</label> &nbsp;
-            <input type="radio" class="form-check-input" name="gender" id="male" value="male">
+            <input type="radio" class="form-check-input" name="gender" id="male" value="male" <?php echo ($row['gender']=='male')? "checked":""; ?>>
             <label for="male">Male</label> &nbsp;
             
-            <input type="radio" class="form-check-input" name="gender" id="female" value="female">
+            <input type="radio" class="form-check-input" name="gender" id="female" value="female" <?php echo ($row['gender']=='female')? "checked":""; ?>>
             <label for="female">Female</label>
           </div>
 
