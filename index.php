@@ -36,6 +36,7 @@
                 <td>@mdo</td>
                 <td>
                     <a href="" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
+                    <a href="" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
                 </td>
                 </tr>
             </tbody>
