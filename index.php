@@ -36,11 +36,11 @@
                     while($row = mysqli_fetch_assoc($result)){
                         ?>
                         <tr>
-                        <th><?php echo $row['id'] ?></th>
-                        <th><?php echo $row['first_name'] ?></th>
-                        <th><?php echo $row['last_name'] ?></th>
-                        <th><?php echo $row['email'] ?></th>
-                        <th><?php echo $row['gender'] ?></th>
+                        <td><?php echo $row['id'] ?></td>
+                        <td><?php echo $row['first_name'] ?></td>
+                        <td><?php echo $row['last_name'] ?></td>
+                        <td><?php echo $row['email'] ?></td>
+                        <td><?php echo $row['gender'] ?></td>
                         <td>
                             <a href="" class="link-dark"><i class="fa-solid fa-pen-to-square fs-5 me-3"></i></a>
                             <a href="" class="link-dark"><i class="fa-solid fa-trash fs-5"></i></a>
