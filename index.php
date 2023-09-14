@@ -14,15 +14,17 @@
     </nav>
 
     <div class="container">
-        <a href="add_new.php" class="btn btn-dark">Add New</a>
+        <a href="add_new.php" class="btn btn-dark mb-3">Add New</a>
 
-        <table class="table">
-            <thead>
+        <table class="table table-hover text-center">
+            <thead class="table-dark">
                 <tr>
-                <th scope="col">#</th>
-                <th scope="col">First</th>
-                <th scope="col">Last</th>
-                <th scope="col">Handle</th>
+                <th scope="col">ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Email</th>
+                <th scope="col">Gender</th>
+                <th scope="col">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -31,17 +33,10 @@
                 <td>Mark</td>
                 <td>Otto</td>
                 <td>@mdo</td>
-                </tr>
-                <tr>
-                <th scope="row">2</th>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-                </tr>
-                <tr>
-                <th scope="row">3</th>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
+                <td>@mdo</td>
+                <td>
+                    <a href="" class="link-dark"><i class="fa-solid fa-pen-to-square"></i></a>
+                </td>
                 </tr>
             </tbody>
         </table>
