@@ -28,6 +28,15 @@
                 </tr>
             </thead>
             <tbody>
+                <?php
+
+                    $sql = "SELECT * FROM 'crud'";
+                    $result = mysqli_query($conn, $sql)
+                    while($row = mysqli_fetch_assoc($result)){
+                        
+                    }
+
+                ?>
                 <tr>
                 <th scope="row">1</th>
                 <td>Mark</td>
