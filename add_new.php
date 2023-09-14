@@ -1,3 +1,18 @@
+<?php
+
+  include "db_conn.php";
+
+  if(isset($_POST['submit'])){
+    $first_name = $_POST['first_name'];
+    $last_name = $_POST['last_name'];
+    $email = $_POST['email'];
+    $gender = $_POST['gender'];
+  }
+
+
+?>
+
+
 <!doctype html>
 <html lang="en">
   <head>
@@ -36,6 +51,20 @@
               <label for="" class="form-label">Email:</label>
               <input type="email" class="form-control" name="email" placeholder="name@example.com">
             </div>
+          </div>
+
+          <div class="form-group mb-3">
+            <label for="">Gender:</label> &nbsp;
+            <input type="radio" class="form-check-input" name="gender" id="male" value="male">
+            <label for="male">Male</label> &nbsp;
+            
+            <input type="radio" class="form-check-input" name="gender" id="female" value="female">
+            <label for="female">Female</label>
+          </div>
+
+          <div>
+            <button type="submit" class="btn btn-success" name="submit">Save</button>
+            <a href="index.php" class="btn btn-danger">Cancel</a>
           </div>
 
         </form>
